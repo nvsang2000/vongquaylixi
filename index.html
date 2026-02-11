@@ -252,19 +252,19 @@
         'responsive': true,
         'segments': [
             {
-                'fillStyle': '#45668e',
+                'fillStyle': '#33CC33',
                 'text': '100.000 VNĐ',
                 'size': winwheelPercentToDegrees(10),
                 'textFontSize': 18,
                 'textFillStyle': '#ffffff'
             }, {
-                'fillStyle': '#BE13A9',
+                'fillStyle': '#FFFF99',
                 'text': '10.000 VNĐ',
                 'size': winwheelPercentToDegrees(10),
                 'textFontSize': 16,
                 'textFillStyle': '#ffffff'
             }, {
-                'fillStyle': '#F37409',
+                'fillStyle': '#66FFFF',
                 'text': '20.000 VNĐ',
                 'size': winwheelPercentToDegrees(10),
                 'textFontSize': 16,
@@ -276,19 +276,19 @@
                 'textFontSize': 18,
                 'textFillStyle': '#ffffff'
             }, {
-                'fillStyle': '#55acee',
+                'fillStyle': '#FF9900',
                 'text': '200.000 VNĐ',
                 'size': winwheelPercentToDegrees(10),
                 'textFontSize': 18,
                 'textFillStyle': '#ffffff'
             }, {
-                'fillStyle': '#F37409',
+                'fillStyle': '#66FFFF',
                 'text': '20.000 VNĐ',
                 'size': winwheelPercentToDegrees(10),
                 'textFontSize': 18,
                 'textFillStyle': '#ffffff'
             }, {
-                'fillStyle': '#BE13A9',
+                'fillStyle': '#FFFF99',
                 'text': '10.000 VNĐ',
                 'size': winwheelPercentToDegrees(10),
                 'textFontSize': 16,
@@ -306,7 +306,7 @@
                 'textFontSize': 18,
                 'textFillStyle': '#ffffff'
             }, {
-                'fillStyle': '#3BEAE4',
+                'fillStyle': '#000011',
                 'text': 'Ô mất lượt',
                 'size': winwheelPercentToDegrees(10),
                 'textFontSize': 18,
@@ -473,7 +473,7 @@
                 document.getElementById("xuatsotien").src = ""; // Xoá ảnh tiền
                 const urlMoney = "img/cn.jpg";
                 Swal.fire({
-                    title: "<h3 style='color:white'>" + 'Ôi không!' + "</h3>",
+                    title: "<h3 style='color:black'>" + 'Ôi không!' + "</h3>",
                     text: 'Bạn đã nhận được cái nịt!',
                     imageUrl: urlMoney,
                     imageWidth: 400,
@@ -491,7 +491,7 @@
                 const urlMoney = "img/" + indicatedSegment.text.replace(".000 VNĐ", "") + "kk.jpg";
                 const text = "Bạn nhận được " + indicatedSegment.text;
                 Swal.fire({
-                    title: "<h3 style='color:white'>" + 'Xin chúc mừng' + "</h3>",
+                    title: "<h3 style='color:black'>" + 'Xin chúc mừng' + "</h3>",
                     text: text,
                     imageUrl: urlMoney,
                     imageWidth: '100%',
