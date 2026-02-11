@@ -22,24 +22,25 @@
         .swal2-html-container {
             color: aliceblue;
         }
-        
+
         html,
         body {
             margin: 0;
             overflow: hidden
         }
+
         /* input range */
-        
+
         input[type=range] {
             -webkit-appearance: none;
             background-color: #DB350B;
             margin: 10px 0;
         }
-        
+
         input[type=range]:focus {
             outline: none;
         }
-        
+
         input[type=range]::-webkit-slider-runnable-track {
             height: 12px;
             cursor: pointer;
@@ -47,7 +48,7 @@
             border-radius: 17px;
             border: 1px solid #F27B7F;
         }
-        
+
         input[type=range]::-webkit-slider-thumb {
             border: 2px solid #F27B7F;
             height: 30px;
@@ -58,11 +59,11 @@
             -webkit-appearance: none;
             margin-top: -10.5px;
         }
-        
+
         input[type=range]:focus::-webkit-slider-runnable-track {
             background: #DB350B;
         }
-        
+
         input[type=range]::-moz-range-track {
             height: 12px;
             cursor: pointer;
@@ -71,7 +72,7 @@
             border-radius: 17px;
             border: 1px solid #F27B7F;
         }
-        
+
         input[type=range]::-moz-range-thumb {
             border: 2px solid #F27B7F;
             height: 30px;
@@ -80,7 +81,7 @@
             background: #FF5F0F;
             cursor: pointer;
         }
-        
+
         input[type=range]::-ms-track {
             height: 12px;
             cursor: pointer;
@@ -89,19 +90,19 @@
             border-color: transparent;
             color: transparent;
         }
-        
+
         input[type=range]::-ms-fill-lower {
             background: #DB350B;
             border: 1px solid #F27B7F;
             border-radius: 34px;
         }
-        
+
         input[type=range]::-ms-fill-upper {
             background: #DB350B;
             border: 1px solid #F27B7F;
             border-radius: 34px;
         }
-        
+
         input[type=range]::-ms-thumb {
             margin-top: 1px;
             height: 30px;
@@ -110,17 +111,19 @@
             background: #FF5F0F;
             cursor: pointer;
         }
-        
+
         input[type=range]:focus::-ms-fill-lower {
             background: #DB350B;
         }
-        
+
         input[type=range]:focus::-ms-fill-upper {
             background: #DB350B;
         }
+
         .topheader {
             padding: 20px;
         }
+
         .topheader .responsive {
             width: 200px;
             height: 100px;
@@ -132,6 +135,7 @@
     <div class="after"></div>
 </div>
 <div class='falling-leaves'></div>
+
 <body>
     <div class="topheader">
         <img class="responsive" id="myImg" onclick="changeSetting()" style="z-index:99;top:50px;" src="img/hea2.png" />
@@ -156,7 +160,8 @@
     </div>
 
     <div class="vongquay">
-        <canvas id="canvas" width="450" height="450" data-responsiveMinWidth="180" data-responsiveScaleHeight="true" data-responsiveMargin="50"></canvas>
+        <canvas id="canvas" width="450" height="450" data-responsiveMinWidth="180" data-responsiveScaleHeight="true"
+            data-responsiveMargin="50"></canvas>
         <div id="batdauquay" class="nutbatdau"></div>
         <div onClick="startSpin();" class="nutquay"></div>
     </div>
@@ -165,31 +170,38 @@
     <div style="position:fixed;z-index:99;bottom:-50px;left:0;background:url(img/bot1.png) repeat-x bottom left;"></div>
     <img class="responsive3" style="position:fixed;z-index:99;bottom:20px;left:20px" src="img/bot2.png" />
     <div class="nutcaidat" style="position:fixed;bottom:0px;left:20px" onClick="mopopup()"></div>
-    <input type="range" id="range" style="position:fixed;bottom:2px;right:20px;z-index: 999" onmousemove="laypower()" touchmousemove="laypower()" min="0" step="0.001" max="1" value="0.3">
+    <input type="range" id="range" style="position:fixed;bottom:2px;right:20px;z-index: 999" onmousemove="laypower()"
+        touchmousemove="laypower()" min="0" step="0.001" max="1" value="0.3">
 
     <img style="position:fixed;z-index:99;top:2px;left:1px" src="img/banglixi.png" />
     <div id="annhantien" style="display: none;">
-        <img class="buttonnhantien" style="position:fixed;z-index:99;top:153px;left:1px;cursor: pointer;" src="img/nhantien.png" onclick="nhantien()" />
+        <img class="buttonnhantien" style="position:fixed;z-index:99;top:153px;left:1px;cursor: pointer;"
+            src="img/nhantien.png" onclick="nhantien()" />
         <img style="position:fixed;z-index:99;top:183px;left:24px;" src="img/muiten.gif" />
     </div>
 
-    <div style="position:fixed;z-index:999;top:37px;left:20px;text-shadow: 2px 2px 5px #f7ff29;color: #f2f4be;" id="xuatluotquay"></div>
+    <div style="position:fixed;z-index:999;top:37px;left:20px;text-shadow: 2px 2px 5px #f7ff29;color: #f2f4be;"
+        id="xuatluotquay"></div>
 
     <img style="position:fixed;z-index:999;top:105px;left:9px" id="xuatsotien"></img>
 
-    <audio id="votay"><source src="sound/votay.mp3" type="audio/mpeg"></audio>
-    <audio id="matluot"><source src="sound/matluot.mp3" type="audio/mpeg"></audio>
+    <audio id="votay">
+        <source src="sound/votay.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="matluot">
+        <source src="sound/matluot.mp3" type="audio/mpeg">
+    </audio>
     <!-- <audio id="nhac" autoplay="true" loop="true"><source src="sound/nhac.mp3" type="audio/mpeg"></audio> -->
 </body>
 <script>
     const range = document.getElementById('range');
 
-    range.addEventListener('touchmove', function() {
+    range.addEventListener('touchmove', function () {
         laypower();
     })
     var solanquay = 500;
     // Sau khi load trang sẽ yêu cầu nhập mật khẩu
-    
+
     function mopopup() {
         document.getElementById("caidat").style.display = "block";
     }
@@ -199,34 +211,34 @@
     }
 
     $(".buttontatpopup").hover(
-        function() {
+        function () {
             $("#popup").attr("src", 'img/popup2.png');
         },
-        function() {
+        function () {
             $("#popup").attr("src", 'img/popup.png');
         }
     );
     $(".buttonlammoi").hover(
-        function() {
+        function () {
             $("#popup").attr("src", 'img/popup.png');
         },
-        function() {
+        function () {
             $("#popup").attr("src", 'img/popup.png');
         }
     );
     $(".buttonnhantien").hover(
-        function() {
+        function () {
             $(".buttonnhantien").attr("src", 'img/nhantienhover.png');
         },
-        function() {
+        function () {
             $(".buttonnhantien").attr("src", 'img/nhantien.png');
         }
     );
     $(".lammoipopupnhantien").hover(
-        function() {
+        function () {
             $("#popuptien").attr("src", 'img/popupnhantienhover.png');
         },
-        function() {
+        function () {
             $("#popuptien").attr("src", 'img/popupnhantien.png');
         }
     );
@@ -238,67 +250,68 @@
         'textAlignment': 'outer', // Căn chỉnh văn bản ra bên ngoài bánh xe.
         'numSegments': 11, // Số ô
         'responsive': true,
-        'segments': [{
-            'fillStyle': '#FF9999',
-            'text': '50.000 VNĐ',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 18,
-            'textFillStyle': '#ffffff'
-        }, {
-            'fillStyle': '#BE13A9',
-            'text': '10.000 VNĐ',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 16,
-            'textFillStyle': '#ffffff'
-        },{
-            'fillStyle': '#F37409',
-            'text': '20.000 VNĐ',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 16,
-            'textFillStyle': '#ffffff'
-        }, {
-            'fillStyle': '#FF9999',
-            'text': '50.000 VNĐ',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 18,
-            'textFillStyle': '#ffffff'
-        }, {
-            'fillStyle': '#BE13A9',
-            'text': '10.000 VNĐ',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 16,
-            'textFillStyle': '#ffffff'
-        },{
-            'fillStyle': '#F37409',
-            'text': '20.000 VNĐ',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 18,
-            'textFillStyle': '#ffffff'
-        }, {
-            'fillStyle': '#BE13A9',
-            'text': '10.000 VNĐ',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 16,
-            'textFillStyle': '#ffffff'
-        },{
-            'fillStyle': '#FF9999',
-            'text': '50.000 VNĐ',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 16,
-            'textFillStyle': '#ffffff'
-        }, {
-            'fillStyle': '#F37409',
-            'text': '20.000 VNĐ',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 16,
-            'textFillStyle': '#ffffff'
-        }, {
-            'fillStyle': '#3BEAE4',
-            'text': 'Ô mất lượt',
-            'size': winwheelPercentToDegrees(10),
-            'textFontSize': 18,
-            'textFillStyle': '#ffffff'
-        }],
+        'segments': [
+            {
+                'fillStyle': '#45668e',
+                'text': '100.000 VNĐ',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 18,
+                'textFillStyle': '#ffffff'
+            }, {
+                'fillStyle': '#BE13A9',
+                'text': '10.000 VNĐ',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 16,
+                'textFillStyle': '#ffffff'
+            }, {
+                'fillStyle': '#F37409',
+                'text': '20.000 VNĐ',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 16,
+                'textFillStyle': '#ffffff'
+            }, {
+                'fillStyle': '#FF9999',
+                'text': '50.000 VNĐ',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 18,
+                'textFillStyle': '#ffffff'
+            }, {
+                'fillStyle': '#55acee',
+                'text': '200.000 VNĐ',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 18,
+                'textFillStyle': '#ffffff'
+            }, {
+                'fillStyle': '#F37409',
+                'text': '20.000 VNĐ',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 18,
+                'textFillStyle': '#ffffff'
+            }, {
+                'fillStyle': '#BE13A9',
+                'text': '10.000 VNĐ',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 16,
+                'textFillStyle': '#ffffff'
+            }, {
+                'fillStyle': '#FF9999',
+                'text': '50.000 VNĐ',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 16,
+                'textFillStyle': '#ffffff'
+            }, {
+                'fillStyle': '#cd201f',
+                'text': '500.000 VNĐ',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 18,
+                'textFillStyle': '#ffffff'
+            }, {
+                'fillStyle': '#3BEAE4',
+                'text': 'Ô mất lượt',
+                'size': winwheelPercentToDegrees(10),
+                'textFontSize': 18,
+                'textFillStyle': '#ffffff'
+            }],
         'animation': // Chỉ định hình động để sử dụng.
         {
             'type': 'spinToStop',
@@ -379,8 +392,8 @@
     // Sau khi nhấp vào nút quay
     // -------------------------------------------------------
     function startSpin() {
-       const pick = randomAngleByDenomination(theWheel);
-       theWheel.animation.stopAngle = pick.stopAngle;
+        const pick = randomAngleByDenomination(theWheel);
+        theWheel.animation.stopAngle = pick.stopAngle;
 
         // Nút quay không nhấp được khi đang chạy
         if (wheelSpinning == false) {
@@ -406,35 +419,35 @@
     // -------------------------------------------------------
     function lammoi() {
         swal.fire({
-                title: "Làm mới vòng quay!",
-                text: "Làm mới vòng quay sẽ xoá hết các vòng quay còn lại. \nLịch sử và tổng tiền lì xì vẫn giữ nguyên. \nChú ý nếu tải lại trang sẽ làm mất lịch sử và tổng tiền lì xì\nNhập mật khẩu để tiếp tục:",
-                type: "input",
-                showCancelButton: true, // Có hiển thị nút cancel không(true = có)
-                closeOnConfirm: false, // Có thể tắt popup khi nhấp Ok không (true = có)
-                showLoaderOnConfirm: true, // Hiển thị loading khi nhấp vào nút Ok
-                animation: "slide-from-top", // Như tên của nó, popup sẽ slide from top
-                inputPlaceholder: "Nhập mật khẩu..."
-            }).then((result) => {
-                if(result.isConfirmed){
-                    swal.fire("Làm mới thành công!", "Hãy đưa chiếc điện thoại cho người muốn nhận lì xì nào!", "success");
+            title: "Làm mới vòng quay!",
+            text: "Làm mới vòng quay sẽ xoá hết các vòng quay còn lại. \nLịch sử và tổng tiền lì xì vẫn giữ nguyên. \nChú ý nếu tải lại trang sẽ làm mất lịch sử và tổng tiền lì xì\nNhập mật khẩu để tiếp tục:",
+            type: "input",
+            showCancelButton: true, // Có hiển thị nút cancel không(true = có)
+            closeOnConfirm: false, // Có thể tắt popup khi nhấp Ok không (true = có)
+            showLoaderOnConfirm: true, // Hiển thị loading khi nhấp vào nút Ok
+            animation: "slide-from-top", // Như tên của nó, popup sẽ slide from top
+            inputPlaceholder: "Nhập mật khẩu..."
+        }).then((result) => {
+            if (result.isConfirmed) {
+                swal.fire("Làm mới thành công!", "Hãy đưa chiếc điện thoại cho người muốn nhận lì xì nào!", "success");
 
-                    document.getElementById("popupnhantien").style.display = "none"; // Tắt popup nhận tiền
+                document.getElementById("popupnhantien").style.display = "none"; // Tắt popup nhận tiền
 
-                    theWheel.stopAnimation(false); // Dừng hình động
-                    theWheel.rotationAngle = 0; // Đặt lại góc bánh xe về 0 độ.
-                    theWheel.draw(); // Gọi draw để hiển thị các thay đổi cho bánh xe.
+                theWheel.stopAnimation(false); // Dừng hình động
+                theWheel.rotationAngle = 0; // Đặt lại góc bánh xe về 0 độ.
+                theWheel.draw(); // Gọi draw để hiển thị các thay đổi cho bánh xe.
 
-                    $(".nutbatdau").css("background-image", "url(img/contro.png)"); // Hiển thị lại nút Quay
+                $(".nutbatdau").css("background-image", "url(img/contro.png)"); // Hiển thị lại nút Quay
 
-                    document.getElementById("xuatluotquay").innerHTML = solanquay;
+                document.getElementById("xuatluotquay").innerHTML = solanquay;
 
-                    wheelSpinning = false; // Đặt lại thành false thành các nút nguồn và quay có thể được bấm lại.
-                    document.getElementById("annhantien").style.display = "none"; // Ẩn nút nhận tiền
-                    document.getElementById("xuatsotien").src = ""; // Xoá ảnh tiền
+                wheelSpinning = false; // Đặt lại thành false thành các nút nguồn và quay có thể được bấm lại.
+                document.getElementById("annhantien").style.display = "none"; // Ẩn nút nhận tiền
+                document.getElementById("xuatsotien").src = ""; // Xoá ảnh tiền
 
-                    dem = 0;
-                }
-            });
+                dem = 0;
+            }
+        });
     }
 
     // -------------------------------------------------------
@@ -478,15 +491,15 @@
                 const urlMoney = "img/" + indicatedSegment.text.replace(".000 VNĐ", "") + "kk.jpg";
                 const text = "Bạn nhận được " + indicatedSegment.text;
                 Swal.fire({
-                        title: "<h3 style='color:white'>" + 'Xin chúc mừng' + "</h3>",
-                        text: text,
-                        imageUrl: urlMoney,
-                        imageWidth: '100%',
-                        imageAlt: 'Custom image',
-                        background: '#CD3333',
-                        //text col
-                    })
-                    // swal("Tết ấm no!", "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Nếu quay tiếp bạn sẽ mất số tiền trước đó!", "success");
+                    title: "<h3 style='color:white'>" + 'Xin chúc mừng' + "</h3>",
+                    text: text,
+                    imageUrl: urlMoney,
+                    imageWidth: '100%',
+                    imageAlt: 'Custom image',
+                    background: '#CD3333',
+                    //text col
+                })
+                // swal("Tết ấm no!", "Bạn nhận được " + indicatedSegment.text + "\nBạn còn lại " + (solanquay - dem) + " lần quay\nChú ý: Nếu quay tiếp bạn sẽ mất số tiền trước đó!", "success");
             }
         }
     }
@@ -509,7 +522,7 @@
         audio.loop = true;
         audio.play();
     })
-    var respon=window.innerWidth>992,numDes=4,numMB=1,leaveDes=8,leaveMob=6,numLeavesWind=respon?leaveDes:leaveMob,windSpeed=respon?numDes:numMB,LeafScene=function(t){this.viewport=t,this.world=document.createElement("div"),this.leaves=[],this.options={numLeaves:numLeavesWind,wind:{magnitude:1.2,maxSpeed:windSpeed,duration:100,start:0,speed:0}},this.width=this.viewport.offsetWidth,this.height=this.viewport.offsetHeight,this.timer=0,this._resetLeaf=function(t){t.x=2*this.width-Math.random()*this.width*1.75,t.y=-10,t.z=200*Math.random(),t.x>this.width&&(t.x=this.width+10,t.y=Math.random()*this.height/2),0==this.timer&&(t.y=Math.random()*this.height),t.rotation.speed=10*Math.random();var e=Math.random();return e>.5?t.rotation.axis="X":e>.25?(t.rotation.axis="Y",t.rotation.x=180*Math.random()+90):(t.rotation.axis="Z",t.rotation.x=360*Math.random()-180,t.rotation.speed=3*Math.random()),t.xSpeedVariation=.8*Math.random()-.4,t.ySpeed=Math.random()+1.5,t},this._updateLeaf=function(t){var e=this.options.wind.speed(this.timer-this.options.wind.start,t.y)+t.xSpeedVariation;t.x-=e,t.y+=t.ySpeed,t.rotation.value+=t.rotation.speed;var i="translateX( "+t.x+"px ) translateY( "+t.y+"px ) translateZ( "+t.z+"px )  rotate"+t.rotation.axis+"( "+t.rotation.value+"deg )";"X"!==t.rotation.axis&&(i+=" rotateX("+t.rotation.x+"deg)"),t.el.style.webkitTransform=i,t.el.style.MozTransform=i,t.el.style.oTransform=i,t.el.style.transform=i,(t.x<-10||t.y>this.height+10)&&this._resetLeaf(t)},this._updateWind=function(){if(0===this.timer||this.timer>this.options.wind.start+this.options.wind.duration){this.options.wind.magnitude=Math.random()*this.options.wind.maxSpeed,this.options.wind.duration=50*this.options.wind.magnitude+(20*Math.random()-10),this.options.wind.start=this.timer;var t=this.height;this.options.wind.speed=function(e,i){var a=this.magnitude/1.5*(t-2*i/3)/t;return a*Math.sin(2*Math.PI/this.duration*e+3*Math.PI/2)+a}}}};LeafScene.prototype.init=function(){for(var t=0;t<this.options.numLeaves;t++){var e={el:document.createElement("div"),x:80,y:80,z:80,rotation:{axis:"X",value:200,speed:100,x:0},xSpeedVariation:0,ySpeed:0,path:{type:1,start:0},image:1};this._resetLeaf(e),this.leaves.push(e),this.world.appendChild(e.el)}this.world.className="leaf-scene",this.viewport.appendChild(this.world),this.world.style.webkitPerspective="1440px",this.world.style.MozPerspective="1440px",this.world.style.oPerspective="1440px",this.world.style.perspective="1440px";var i=this;window.onresize=function(t){i.width=i.viewport.offsetWidth,i.height=i.viewport.offsetHeight}},LeafScene.prototype.render=function(){this._updateWind();for(var t=0;t<this.leaves.length;t++)this._updateLeaf(this.leaves[t]);this.timer++,requestAnimationFrame(this.render.bind(this))};var leafContainer=document.querySelector(".falling-leaves"),leaves=new LeafScene(leafContainer);leaves.init(),leaves.render();
+    var respon = window.innerWidth > 992, numDes = 4, numMB = 1, leaveDes = 8, leaveMob = 6, numLeavesWind = respon ? leaveDes : leaveMob, windSpeed = respon ? numDes : numMB, LeafScene = function (t) { this.viewport = t, this.world = document.createElement("div"), this.leaves = [], this.options = { numLeaves: numLeavesWind, wind: { magnitude: 1.2, maxSpeed: windSpeed, duration: 100, start: 0, speed: 0 } }, this.width = this.viewport.offsetWidth, this.height = this.viewport.offsetHeight, this.timer = 0, this._resetLeaf = function (t) { t.x = 2 * this.width - Math.random() * this.width * 1.75, t.y = -10, t.z = 200 * Math.random(), t.x > this.width && (t.x = this.width + 10, t.y = Math.random() * this.height / 2), 0 == this.timer && (t.y = Math.random() * this.height), t.rotation.speed = 10 * Math.random(); var e = Math.random(); return e > .5 ? t.rotation.axis = "X" : e > .25 ? (t.rotation.axis = "Y", t.rotation.x = 180 * Math.random() + 90) : (t.rotation.axis = "Z", t.rotation.x = 360 * Math.random() - 180, t.rotation.speed = 3 * Math.random()), t.xSpeedVariation = .8 * Math.random() - .4, t.ySpeed = Math.random() + 1.5, t }, this._updateLeaf = function (t) { var e = this.options.wind.speed(this.timer - this.options.wind.start, t.y) + t.xSpeedVariation; t.x -= e, t.y += t.ySpeed, t.rotation.value += t.rotation.speed; var i = "translateX( " + t.x + "px ) translateY( " + t.y + "px ) translateZ( " + t.z + "px )  rotate" + t.rotation.axis + "( " + t.rotation.value + "deg )"; "X" !== t.rotation.axis && (i += " rotateX(" + t.rotation.x + "deg)"), t.el.style.webkitTransform = i, t.el.style.MozTransform = i, t.el.style.oTransform = i, t.el.style.transform = i, (t.x < -10 || t.y > this.height + 10) && this._resetLeaf(t) }, this._updateWind = function () { if (0 === this.timer || this.timer > this.options.wind.start + this.options.wind.duration) { this.options.wind.magnitude = Math.random() * this.options.wind.maxSpeed, this.options.wind.duration = 50 * this.options.wind.magnitude + (20 * Math.random() - 10), this.options.wind.start = this.timer; var t = this.height; this.options.wind.speed = function (e, i) { var a = this.magnitude / 1.5 * (t - 2 * i / 3) / t; return a * Math.sin(2 * Math.PI / this.duration * e + 3 * Math.PI / 2) + a } } } }; LeafScene.prototype.init = function () { for (var t = 0; t < this.options.numLeaves; t++) { var e = { el: document.createElement("div"), x: 80, y: 80, z: 80, rotation: { axis: "X", value: 200, speed: 100, x: 0 }, xSpeedVariation: 0, ySpeed: 0, path: { type: 1, start: 0 }, image: 1 }; this._resetLeaf(e), this.leaves.push(e), this.world.appendChild(e.el) } this.world.className = "leaf-scene", this.viewport.appendChild(this.world), this.world.style.webkitPerspective = "1440px", this.world.style.MozPerspective = "1440px", this.world.style.oPerspective = "1440px", this.world.style.perspective = "1440px"; var i = this; window.onresize = function (t) { i.width = i.viewport.offsetWidth, i.height = i.viewport.offsetHeight } }, LeafScene.prototype.render = function () { this._updateWind(); for (var t = 0; t < this.leaves.length; t++)this._updateLeaf(this.leaves[t]); this.timer++, requestAnimationFrame(this.render.bind(this)) }; var leafContainer = document.querySelector(".falling-leaves"), leaves = new LeafScene(leafContainer); leaves.init(), leaves.render();
 </script>
 
 </html>
