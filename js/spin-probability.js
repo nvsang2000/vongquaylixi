@@ -14,13 +14,13 @@
 
 // 1) Khai báo tỉ lệ theo MỆNH GIÁ (weight càng lớn => càng dễ trúng)
 const PRIZE_WEIGHTS = {
-  "10.000 VNĐ": 10,
-  "20.000 VNĐ": 30,
-  "50.000 VNĐ": 30,    
-  "100.000 VNĐ": 0.1,
-  "200.000 VNĐ": 0.1,
-  "500.000 VNĐ": 0.1,
-  "Ô mất lượt": 10
+  "10.000 VNĐ": 20,
+  "20.000 VNĐ": 40,
+  "50.000 VNĐ": 40,    
+  "100.000 VNĐ": 0,
+  "200.000 VNĐ": 0,
+  "500.000 VNĐ": 0,
+  "Ô mất lượt": 0
 };
 
 // 2) Helper: chọn index theo trọng số (weights là mảng số dương; index trả về là segmentIndex (1-based))
