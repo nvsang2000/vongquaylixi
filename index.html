@@ -4,12 +4,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title id="titleWeb">Lì xì năm 2024</title>
+    <title id="titleWeb">Lì xì năm 2026</title>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Francois+One&amp;display=swap'>
     <link rel='stylesheet' href='css/sweetalert.css'>
     <link rel='stylesheet' href='css/custom.css'>
     <script type="text/javascript" src="js/Winwheel.min.js"></script>
     <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/spin-probability.js"></script>
     <script src='js/sweetalert-dev.js'></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
@@ -116,6 +117,13 @@
         
         input[type=range]:focus::-ms-fill-upper {
             background: #DB350B;
+        }
+        .topheader {
+            padding: 20px;
+        }
+        .topheader .responsive {
+            width: 200px;
+            height: 100px;
         }
     </style>
 </head>
@@ -371,7 +379,9 @@
     // Sau khi nhấp vào nút quay
     // -------------------------------------------------------
     function startSpin() {
-        theWheel.animation.stopAngle = randomAngle();
+       const pick = randomAngleByDenomination(theWheel);
+       theWheel.animation.stopAngle = pick.stopAngle;
+
         // Nút quay không nhấp được khi đang chạy
         if (wheelSpinning == false) {
             // Dựa trên mức công suất được chọn, hãy điều chỉnh số vòng quay cho bánh xe, càng nhiều lần
