@@ -126,7 +126,7 @@
 
         .topheader .responsive {
             width: 200px;
-            height: 100px;
+            height: auto;
         }
     </style>
 </head>
@@ -138,7 +138,7 @@
 
 <body>
     <div class="topheader">
-        <img class="responsive" id="myImg" onclick="changeSetting()" style="z-index:99;top:50px;" src="img/hea2.png" />
+        <img class="responsive" id="myImg" onclick="changeSetting()" style="z-index:99;top:50px; " src="img/hea2.png" />
     </div>
 
     <div id="caidat">
@@ -168,7 +168,7 @@
 
     <img class="responsive2" style="position:fixed;z-index:99;top:0px;right:0px" src="img/hea1.png" />
     <div style="position:fixed;z-index:99;bottom:-50px;left:0;background:url(img/bot1.png) repeat-x bottom left;"></div>
-    <img class="responsive3" style="position:fixed;z-index:99;bottom:20px;left:20px" src="img/bot2.png" />
+    <img class="responsive3" style="position:fixed;z-index:99;bottom:20px;left:20px; width: 200px; height: auto;" src="img/bot2.png" />
     <div class="nutcaidat" style="position:fixed;bottom:0px;left:20px" onClick="mopopup()"></div>
     <input type="range" id="range" style="position:fixed;bottom:2px;right:20px;z-index: 999" onmousemove="laypower()"
         touchmousemove="laypower()" min="0" step="0.001" max="1" value="0.3">
